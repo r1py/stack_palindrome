@@ -3,7 +3,7 @@
 """ Integer Stack manager and palindrome checker in Python
 
 """
-
+from __future__ import print_function
 import random
 
 
