@@ -83,4 +83,19 @@ class Stack:
 
 
 if __name__ == '__main__':
-    pass
+    STACK = Stack()
+    STACK.push()
+    STACK.pop()
+    STACK.pop()
+    STACK.push(2)
+    STACK.push(2)
+    STACK.print()
+    STACK.reverse()
+    STACK.shake()
+    if STACK.is_palindrome():
+        print('Palindrome')
+    if STACK.mixed_can_be_palindrome():
+        print('Mixed can be a Palindrome')
+    STACK.pop()
+    STACK.print()
+    STACK.mixed_can_be_palindrome()
