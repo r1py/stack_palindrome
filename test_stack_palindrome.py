@@ -2,6 +2,8 @@
 """
 pytest for stack_palindrome.py
 
+requirements : pytest
+usage : pytest -v
 """
 import random
 from copy import deepcopy
