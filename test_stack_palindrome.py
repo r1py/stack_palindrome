@@ -109,7 +109,6 @@ def test_is_palindrome():
         stack.stack_list = make_palindrome()
         assert stack.is_palindrome()
         stack.push(10**6)
-        print(stack.stack_list)
         if len(stack.stack_list) > 1:
             assert not stack.is_palindrome()
 
