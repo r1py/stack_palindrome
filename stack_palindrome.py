@@ -86,7 +86,7 @@ class Stack:
                       if self.stack_list.count(x) % 2]
 
         # No more than one distinct value to obtain a palindrome
-        return len(list(set(odd_values))) <= 1
+        return len(set(odd_values)) <= 1
 
 
 def main():
