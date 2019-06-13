@@ -8,7 +8,7 @@ usage : pytest -v
 import random
 from copy import deepcopy
 
-from stack_palindrome import Stack
+from stack_palindrome import Stack, main
 
 
 # Tools functions
@@ -130,3 +130,8 @@ def test_mixed_can_be_palindrome():
         stack.push(10**6 + 1)
         if len(stack.stack_list) > 1:
             assert not stack.mixed_can_be_palindrome()
+
+
+def test_main():
+    """Test: stack_palindrome main function"""
+    main()

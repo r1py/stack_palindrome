@@ -84,20 +84,25 @@ class Stack:
                     if self.stack_list.count(x) % 2]) <= 1
 
 
-if __name__ == '__main__':
-    STACK = Stack()
-    STACK.push()
-    STACK.pop()
-    STACK.pop()
-    STACK.push(2)
-    STACK.push(2)
-    STACK.print()
-    STACK.reverse()
-    STACK.shake()
-    if STACK.is_palindrome():
+def main():
+    """ Main function """
+    stack = Stack()
+    stack.push()
+    stack.pop()
+    stack.pop()
+    stack.push(2)
+    stack.push(2)
+    stack.print()
+    stack.reverse()
+    stack.shake()
+    if stack.is_palindrome():
         print('Palindrome')
-    if STACK.mixed_can_be_palindrome():
+    if stack.mixed_can_be_palindrome():
         print('Mixed can be a Palindrome')
-    STACK.pop()
-    STACK.print()
-    STACK.mixed_can_be_palindrome()
+    stack.pop()
+    stack.print()
+    stack.mixed_can_be_palindrome()
+
+
+if __name__ == '__main__':
+    main()
