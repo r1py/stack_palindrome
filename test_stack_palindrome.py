@@ -16,15 +16,17 @@ from stack_palindrome import Stack
 def make_filled_stack(max_int=10):
     """Return a stack with random integers in stack_list"""
     stack = Stack()
-    stack.stack_list = [random.randint(-999, 999) for i in range(random.randint(1, max_int))]
+    stack.stack_list = [random.randint(-999, 999)
+                        for i in range(random.randint(1, max_int))]
     return stack
 
 
 def make_palindrome(max_int=10):
     """Return a Palindrome list of integers"""
-    stack_list = [random.randint(-999, 999) for i in range(random.randint(0, max_int/2))]
-    stack_list = stack_list + \
-                 random.choice([[], [random.randint(-999, 999)]]) + stack_list[::-1]
+    stack_list = [random.randint(-999, 999)
+                  for i in range(random.randint(0, max_int/2))]
+    stack_list = stack_list + random.choice(
+        [[], [random.randint(-999, 999)]]) + stack_list[::-1]
     return stack_list
 
 
@@ -53,7 +55,8 @@ def test_push():
 
 
 def test_pop_empty_stack():
-    """Test:  Remove and return an integer from the stack - with empty stack_list"""
+    """Test:  Remove and return an integer from the stack
+    with empty stack_list"""
     stack = Stack()
     stack_before = deepcopy(stack)
     poped = stack.pop()
@@ -62,7 +65,8 @@ def test_pop_empty_stack():
 
 
 def test_pop_filled_stack():
-    """Test:  Remove and return an integer from the stack - with filled stack_list"""
+    """Test:  Remove and return an integer from the stack
+    with filled stack_list"""
     stack = make_filled_stack()
     stack_before = deepcopy(stack)
     poped = stack.pop()
@@ -98,7 +102,8 @@ def test_shake():
 
 
 def test_is_palindrome():
-    """Test: Returns True if the stack (content of self.stack_list) is a palindrome"""
+    """Test: Returns True if the stack (content of self.stack_list)
+    is a palindrome"""
     stack = Stack()
     assert stack.is_palindrome()
     stack.push(2)

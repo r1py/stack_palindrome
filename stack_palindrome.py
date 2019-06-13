@@ -78,8 +78,10 @@ class Stack:
         """
         if len(self.stack_list) <= 1:
             return True
-        # If there is more than one Integer with odd counts, it can't be a palindrome
-        return len([x for x in self.stack_list if self.stack_list.count(x) % 2]) <= 1
+        # If there is more than one Integer with odd counts,
+        # it can't be a palindrome
+        return len([x for x in self.stack_list
+                    if self.stack_list.count(x) % 2]) <= 1
 
 
 if __name__ == '__main__':
