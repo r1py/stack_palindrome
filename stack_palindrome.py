@@ -80,8 +80,13 @@ class Stack:
             return True
         # If there is more than one Integer with odd counts,
         # it can't be a palindrome
-        return len([x for x in self.stack_list
-                    if self.stack_list.count(x) % 2]) <= 1
+
+        # Put odd values elements in a list
+        odd_values = [x for x in self.stack_list
+                      if self.stack_list.count(x) % 2]
+
+        # No more than one distinct value to obtain a palindrome
+        return len(list(set(odd_values))) <= 1
 
 
 def main():

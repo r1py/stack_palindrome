@@ -132,6 +132,13 @@ def test_mixed_can_be_palindrome():
             assert not stack.mixed_can_be_palindrome()
 
 
+def test_multiple_occurence():
+    """Test Multiple occurences of integers"""
+    stack = Stack()
+    stack.stack_list = [3, 3, 3]
+    assert stack.mixed_can_be_palindrome()
+
+
 def test_main():
     """Test: stack_palindrome main function"""
     main()
