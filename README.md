@@ -1,4 +1,4 @@
-
+[![CircleCI](https://circleci.com/gh/r1py/stack_palindrome.svg?style=svg)](https://circleci.com/gh/r1py/stack_palindrome)
 
 # Pile
 ## Question 1
