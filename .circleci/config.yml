@@ -20,4 +20,4 @@ jobs:
           command: |
             . .env/bin/activate
             flake8 --exclude=.env --statistics
-            pytest -v --cov --ignore=.env
+            pytest -v --cov-config=.coveragerc --cov
