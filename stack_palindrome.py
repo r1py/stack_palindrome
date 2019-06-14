@@ -43,17 +43,9 @@ class Stack:
         """Display the contents of the stack (self.stack_list)"""
         print(self.stack_list)
 
-    def _reversed(self):
-        """Return the stack_list reversed
-
-        Returns:
-            list : of integers
-        """
-        return self.stack_list[::-1]
-
     def reverse(self):
         """Reverse the order of self.stack_list"""
-        self.stack_list = self._reversed()
+        self.stack_list = self.stack_list[::-1]
 
     def shake(self):
         """Randomly mix the elements of the Stack (self.stack_list)"""
@@ -66,7 +58,10 @@ class Stack:
             True : if self.stack_list is a palindrome
             False : if self.stack_list is NOT a palindrome
         """
-        return self.stack_list == self._reversed()
+        for i in range(len(self.stack_list) // 2):
+            if self.stack_list[i] != self.stack_list[-i - 1]:
+                return False
+        return True
 
     def mixed_can_be_palindrome(self):
         """Returns True if the stack (content of self.stack_list) can be mixed

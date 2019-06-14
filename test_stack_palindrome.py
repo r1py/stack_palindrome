@@ -74,13 +74,6 @@ def test_pop_filled_stack():
     assert isinstance(poped, int)
 
 
-def test_reversed():
-    """Test: Return the stack_list reversed"""
-    for _ in range(10):
-        stack = make_filled_stack()
-        assert [x for x in reversed(stack.stack_list)] == stack._reversed()
-
-
 def test_reverse():
     """Test: Reverse the order of self.stack_list"""
     for _ in range(10):
@@ -128,8 +121,7 @@ def test_mixed_can_be_palindrome():
         assert stack.mixed_can_be_palindrome()
         stack.push(10**6)
         stack.push(10**6 + 1)
-        if len(stack.stack_list) > 1:
-            assert not stack.mixed_can_be_palindrome()
+        assert not stack.mixed_can_be_palindrome()
 
 
 def test_multiple_occurence():
