@@ -80,6 +80,7 @@ def test_reverse():
         stack = make_filled_stack()
         stack_list = stack.stack_list
         stack.reverse()
+        assert stack_list == [x for x in reversed(stack.stack_list)]
         stack.reverse()
         assert stack_list == stack.stack_list
 
